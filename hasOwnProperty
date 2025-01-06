@@ -1,0 +1,28 @@
+Object.prototype.hasOwnProperty.call
+
+const objects = {
+    "obj1" : {
+              "pname" : "zp",
+              "quantity" : "30"
+        
+    },
+    "obj2": {
+           "pname":"zcc",
+            "quantity":"50"
+        
+    }
+}
+
+console.log(`Keys ${Object.keys(objects)} and values ${Object.values(objects)}`);
+
+for(let ob in objects) {
+    console.log(`keys are ${ob}`);
+    if(Object.prototype.hasOwnProperty.call(objects,ob)) {
+        console.log(objects[ob].pname);
+        
+    }
+    
+}
+
+
+Objects's prototype could have a multiple atribute with the same name, so it is always best practice to check if the attribute belongs to its own property.
