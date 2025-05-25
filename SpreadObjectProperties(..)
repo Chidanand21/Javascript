@@ -1,0 +1,24 @@
+
+let cordinatesClone = [];
+let coordinates = [
+    {
+        obj1:
+        {  
+            'name' : 'coordinate_1',
+            'x' : 12,
+            'y' : 123
+        },
+        obj2:'ZP',
+        obj3:'ZCC'
+        
+    }
+]; // Response from Apex could be in this format
+
+
+cordinatesClone = coordinates.map(result => ({
+    ...result.obj1,
+    obj2:result.obj2,
+    obj3:result.obj3
+    
+}));
+console.log('coordinates'+JSON.stringify(cordinatesClone));
