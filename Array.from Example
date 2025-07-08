@@ -1,0 +1,31 @@
+const serviceCode = 'a';
+const summaries = {};
+let summary = {
+              parentCategoryCode: null,
+              serviceCodes: new Set(),
+              sumTotalPrice: 0,
+              sumQuantity: 0,
+              onlyOriginalLine: true,
+              sumQuantityNoFlex: 0
+            };
+            
+    summary.parentCategoryCode = 'x';
+    summary.serviceCodes.add('a');
+    summary.serviceCodes.add('b');
+    summary.sumTotalPrice = 10;
+    summary.sumQuantity = 20;
+    summary.onlyOriginalLine = true;
+    summary.sumQuantityNoFlex = '500';
+    
+    summaries[serviceCode] = summary;
+    
+    for(const key in summaries) {
+        console.log('--'+key);
+        console.log('sCodes'+summaries[key].serviceCodes);
+        if(summaries[key].serviceCodes){
+            console.log('hey'+summaries[key].serviceCodes);
+            console.log('##'+Array.from(summaries[key].serviceCodes));
+        }
+        
+    }
+    
