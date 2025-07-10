@@ -1,0 +1,48 @@
+{
+  "productTimelines": {
+    "a1OE1000003aU98MAE": {
+      "versions": [
+        {
+          "record": {
+            "isChangedInRulesEngine": false,
+            "Id": "a1OE1000003aU97MAE"
+          },
+          "charges": [
+            {
+              "record": {
+                "Id": "a1NE1000004Ox4fMAD",
+                "zqu__QuoteRatePlan__c": "a1OE1000003aU98MAE"
+              }
+            },
+            {
+              "record": {
+                "Id": "a1NE1000004Ox4fMAE",
+                "zqu__QuoteRatePlan__c": "a1OE1000003aU98MAE"
+              }
+            }
+          ]
+        },
+        {
+          "record": {
+            "isChangedInRulesEngine": false,
+            "Id": "a1OE1000003aU97MAF"
+          },
+          "charges": [
+            {
+              "record": {
+                "Id": "a1NE1000004Ox4fMAH",
+                "zqu__QuoteRatePlan__c": "a1OE1000003aU97MAF"
+              }
+            },
+            {
+              "record": {
+                "Id": "a1NE1000004Ox4fMAI",
+                "zqu__QuoteRatePlan__c": "a1OE1000003aU97MAF"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
