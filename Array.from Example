@@ -1,3 +1,11 @@
+Array.from() creates a new array from:
+
+Array-like objects (objects with a length property, e.g. arguments, NodeLists, strings).
+
+Iterable objects (like Set, Map, or anything with [Symbol.iterator]).
+
+
+
 const serviceCode = 'a';
 const summaries = {};
 let summary = {
