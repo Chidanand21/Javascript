@@ -1,0 +1,12 @@
+Array.some
+The .some() method tests whether at least one element in the array passes a given condition (callback function).
+
+const users = [
+    {'name':'user1','active':true},
+    {'name':'user2','active':false},
+    {'name':'user1','active':false},
+    
+    ];
+    
+    const hasActiveUser = users.some((user) => user.active);
+    console.log('=hasActiveUser='+hasActiveUser);
