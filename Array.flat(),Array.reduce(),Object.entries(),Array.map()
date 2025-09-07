@@ -1,0 +1,61 @@
+const quoteIndexToMessage = {
+    "1": [
+        {
+            "rampIndex": 1,
+            "ratePlan": "Zoom One Pro Annual"
+        },
+        {
+            "rampIndex": 2,
+            "ratePlan": "Zoom One Pro Annual"
+        },
+        {
+            "rampIndex": 3,
+            "ratePlan": "Zoom One Pro Annual"
+        }
+    ]
+}
+console.log(Object.values(quoteIndexToMessage));
+
+console.log(Object.values(quoteIndexToMessage).flat());
+
+//flat will convert array of array to single array and flatens all the elements
+const objFlatArrays = Object.values(quoteIndexToMessage).flat();
+
+//Reduce will get Ramp wise rate plan name
+// Example - {'Ramp 1' : ['Zoom One Pro Annual'], 'Ramp 2' : ['Zoom One Pro Annual']}
+const objReduced = objFlatArrays.reduce((acc,curr) => {
+    const rampIndex = `Ramp ${curr.rampIndex}`;
+    if(!acc[rampIndex]) acc[rampIndex] = [];
+        acc[rampIndex].push(curr.ratePlan);
+        return acc;
+}, {});
+
+console.log('=Ramp Wise Grouping='+JSON.stringify(objReduced));
+
+const entries = Object.entries(objReduced); // entries() - Returns array of [key,value] which is  [[key,value],[key,value]]
+
+console.log('=Entries='+JSON.stringify(entries));
+
+const formatMsg = entries.map(([rampIndex,ratePlans]) => 
+    '<br/>'+
+    rampIndex +
+    '<br/>'+
+    ratePlans.map((rp) => "• "+rp)
+    .join('<br/>')
+)
+.join('');
+
+console.log('==FINAL Message=='+formatMsg);
+
+Lesson Learn in Last arrow function
+1.If we are not returning anything then dont put flower bracket after arrow
+2. If you are not putting flower bracket after arrow then dont put semicolun untill the final letter/word.
+
+
+Other Lessons
+Array.flat()
+Array.reduce();
+Object.entries();
+Array.map()
+"<br/>"
+"• "
